@@ -1,0 +1,58 @@
+Integrando PostCSS y TailwindCSS a nuestro proyecto
+
+Lo primero es instalar estos recursos 
+
+npm i tailwindcss postcss autoprefixer
+
+y para iniciar la biblioteca de TailwindCSS dentro de la App 
+
+npx tailwindcss init -p
+    esto nos creara tailwind.config.js y postcss.config.js
+
+en el archivo de tailwind vamos a agregarle toda la configuración de la paleta de colores. 
+const colors = require('tailwindcss/colors')
+
+
+toca crear un archivo en el entorno global. 'env.local' dentro agregamos el comando
+
+TAILWIND_MODE=watch
+
+ahora para configurar tailwind ahora vamos a crear un archivo en styles 'tailwind.css'
+dentro configuramos
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+borramos los otros archivos de styles que no necesitaremos
+
+Ahora configurar jsconfig.jsconfig , acá se configuran los alias 
+
+lo siguiente es lo basico {
+    "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "@styles/*": ["styles/*"],
+            
+        }
+
+    }
+}
+
+
+
+
+En este proyecto se va a instalar heroicons 
+
+npm install @heroicons/react
+
+y tambien headless utilities
+
+npm install @headlessui/react@latest
+
+esta configuración ira en index.js
+
+
+vamos ahora a crear un proyecto con la plantiya de heroes Section de TailwindCSS
+
+Importar todos los elementos de TailwindCSS que se requieran 
