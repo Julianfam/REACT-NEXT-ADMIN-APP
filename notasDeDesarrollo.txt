@@ -56,3 +56,12 @@ esta configuración ira en index.js
 vamos ahora a crear un proyecto con la plantiya de heroes Section de TailwindCSS
 
 Importar todos los elementos de TailwindCSS que se requieran 
+
+
+
+crear custom hook de autenticación ,coockie sesion y deslogueo 
+instalar
+
+js-cookie nos ayuda a asignar cookies 
+
+npm i js-cookie axios
