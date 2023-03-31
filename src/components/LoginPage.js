@@ -16,7 +16,7 @@ export default function LoginPage() {
     const password = passwordRef.current.value;
 
     auth.signIn(email,password).then(()=>{
-      router.push('/dashboard');
+      router.push('/dashboard/indexd/');
       
     })
   }
